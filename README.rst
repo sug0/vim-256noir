@@ -14,7 +14,7 @@ Features
 Usage
 -----
 - Enable `256 colors in vim <http://vim.wikia.com/wiki/256_colors_in_vim>`_.
-- Put ``256_noir.vim`` in ~/.vim/colors/
+- Install using your favorite plugin manager.
 - Add ``colorscheme 256_noir`` to ~/.vimrc
 
 .. image:: screenshot.png
