@@ -25,7 +25,7 @@ else
 
   let s:ADD        = '120'
   let s:DEL        = '167'
-  let s:CHANGE     = '228'
+  let s:CHANGE     = s:PURPLE
 
   let s:UI_FG      = s:MID_GRAY
   let s:UI_BG      = s:DARK_GRAY
@@ -112,8 +112,8 @@ exe 'hi SignifySignChange '.s:M.'bg='.s:UI_BG.'      '.s:M.'fg='.s:CHANGE
 
 exe 'hi DiffAdd           '.s:M.'bg='.s:BLACK.'      '.s:M.'fg='.s:ADD
 exe 'hi DiffChange        '.s:M.'bg='.s:BLACK.'      '.s:M.'fg='.s:CHANGE
-exe 'hi DiffDelete        '.s:M.'bg='.s:BLACK.'      '.s:M.'fg='.s:DEL
-exe 'hi DiffText          '.s:M.'bg='.s:BRIGHT_RED.' '.s:M.'fg='.s:GRAY
+exe 'hi DiffDelete        '.s:M.'bg='.s:ADD.'        '.s:M.'fg='.s:BLACK
+exe 'hi DiffText          '.s:M.'bg='.s:CHANGE.'     '.s:M.'fg='.s:BLACK
 
 hi def link diffCommon   Statement
 hi def link diffRemoved  DiffDelete
