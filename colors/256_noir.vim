@@ -13,8 +13,8 @@ if !has('gui_running') && &t_Co != 256
 endif
 
 let s:WHITE      = '255'
-let s:GRAY       = '250'
-let s:MID_GRAY   = '244'
+let s:GRAY       = '249'
+let s:MID_GRAY   = '242'
 let s:DARK_GRAY  = '233'
 let s:BLACK      = '16'
 let s:BRIGHT_RED = '196'
@@ -24,7 +24,7 @@ let s:ADD        = '120'
 let s:DEL        = '167'
 let s:CHANGE     = s:PURPLE
 let s:UI_FG      = s:MID_GRAY
-let s:UI_BG      = s:DARK_GRAY
+let s:UI_BG      = s:BLACK
 
 " https://groups.google.com/forum/#!msg/vim_dev/QUzGeJsx-Cs/nEfVWxhlUq4J
 exe 'hi Normal ctermbg='.s:BLACK.' ctermfg='.s:GRAY
@@ -76,8 +76,8 @@ exe 'hi ErrorMsg       ctermbg=124              ctermfg='.s:WHITE
 exe 'hi FoldColumn     ctermbg='.s:BLACK.'      ctermfg='.s:GRAY
 exe 'hi Folded         ctermbg='.s:BLACK.'      ctermfg='.s:BRIGHT_RED
 exe 'hi IncSearch      ctermbg='.s:BLACK.'      ctermfg='.s:GRAY
-exe 'hi CursorLineNr   ctermbg=NONE             ctermfg='.s:BRIGHT_RED
-exe 'hi LineNr         ctermbg=NONE             ctermfg='.s:UI_FG
+exe 'hi CursorLineNr   ctermbg='.s:UI_BG.'      ctermfg='.s:BRIGHT_RED
+exe 'hi LineNr         ctermbg='.s:UI_BG.'      ctermfg='.s:UI_FG
 exe 'hi ModeMsg        ctermbg='.s:BLACK.'      ctermfg='.s:GRAY
 exe 'hi Search         ctermbg='.s:PURPLE.'     ctermfg='.s:WHITE
 exe 'hi Signcolumn     ctermbg='.s:BLACK.'      ctermfg='.s:UI_FG
@@ -98,9 +98,9 @@ if version >= 700
   exe 'hi PmenuSbar      ctermbg='.s:GRAY.'       ctermfg='.s:BLACK
   exe 'hi PmenuSel       ctermbg='.s:GRAY.'       ctermfg='.s:BLACK
   exe 'hi PmenuThumb     ctermbg='.s:MID_GRAY.'   ctermfg='.s:DARK_GRAY
-  exe 'hi TabLine        ctermbg='.s:UI_BG.'      ctermfg='.s:UI_FG.'    cterm=NONE'
-  exe 'hi TabLineFill    ctermbg=NONE             ctermfg='.s:UI_BG
-  exe 'hi TabLineSel     ctermbg='.s:UI_BG.'      ctermfg='.s:GRAY
+  exe 'hi TabLine        ctermbg='.s:DARK_GRAY.'  ctermfg='.s:UI_FG.'    cterm=NONE'
+  exe 'hi TabLineFill    ctermbg='.s:DARK_GRAY.'  ctermfg='.s:DARK_GRAY
+  exe 'hi TabLineSel     ctermbg='.s:DARK_GRAY.'  ctermfg='.s:GRAY
 endif
 
 if has("spell")
