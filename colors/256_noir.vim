@@ -49,23 +49,23 @@ exe 'hi PreCondit      ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
 exe 'hi Repeat         ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
 exe 'hi SpecialChar    ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
 exe 'hi SpecialComment ctermbg='.s:BLACK.'      ctermfg='.s:MID_GRAY
-exe 'hi String         ctermbg='.s:BLACK.'      ctermfg='.s:MID_GRAY.' cterm=italic'
+exe 'hi String         ctermbg='.s:BLACK.'      ctermfg='.s:MID_GRAY
 exe 'hi Structure      ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
 exe 'hi Tag            ctermbg='.s:BLACK.'      ctermfg='.s:BRIGHT_RED
 exe 'hi Todo           ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
 exe 'hi Typedef        ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
 
-exe 'hi Comment        ctermbg='.s:BLACK.'      ctermfg='.s:MID_GRAY.' cterm=italic'
-exe 'hi Conditional    ctermbg='.s:BLACK.'      ctermfg='.s:WHITE.'    cterm=italic'
+exe 'hi Comment        ctermbg='.s:BLACK.'      ctermfg='.s:MID_GRAY
+exe 'hi Conditional    ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
 exe 'hi Directory      ctermbg='.s:BLACK.'      ctermfg='.s:WHITE.'    cterm=bold'
 exe 'hi Identifier     ctermbg='.s:BLACK.'      ctermfg='.s:WHITE.'    cterm=bold'
-exe 'hi Keyword        ctermbg='.s:BLACK.'      ctermfg='.s:WHITE.'    cterm=italic'
+exe 'hi Keyword        ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
 exe 'hi PreProc        ctermbg='.s:BLACK.'      ctermfg='.s:WHITE.'    cterm=bold'
 exe 'hi Special        ctermbg='.s:BLACK.'      ctermfg='.s:WHITE.'    cterm=bold'
 exe 'hi SpecialKey     ctermbg='.s:BLACK.'      ctermfg='.s:WHITE.'    cterm=bold'
-exe 'hi Statement      ctermbg='.s:BLACK.'      ctermfg='.s:WHITE.'    cterm=italic'
-exe 'hi StorageClass   ctermbg='.s:BLACK.'      ctermfg='.s:WHITE.'    cterm=italic'
-exe 'hi Type           ctermbg='.s:BLACK.'      ctermfg='.s:WHITE.'    cterm=italic'
+exe 'hi Statement      ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
+exe 'hi StorageClass   ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
+exe 'hi Type           ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
 hi! link Title Directory
 hi! link MoreMsg Comment
 hi! link Question Comment
