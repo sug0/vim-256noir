@@ -24,7 +24,7 @@ let s:ADD        = '120'
 let s:DEL        = '167'
 let s:CHANGE     = s:PURPLE
 let s:UI_FG      = s:MID_GRAY
-let s:UI_BG      = s:BLACK
+let s:UI_BG      = s:DARK_GRAY
 
 " https://groups.google.com/forum/#!msg/vim_dev/QUzGeJsx-Cs/nEfVWxhlUq4J
 exe 'hi Normal ctermbg='.s:BLACK.' ctermfg='.s:GRAY
@@ -76,8 +76,8 @@ exe 'hi ErrorMsg       ctermbg=124              ctermfg='.s:WHITE
 exe 'hi FoldColumn     ctermbg='.s:BLACK.'      ctermfg='.s:GRAY
 exe 'hi Folded         ctermbg='.s:BLACK.'      ctermfg='.s:BRIGHT_RED
 exe 'hi IncSearch      ctermbg='.s:BLACK.'      ctermfg='.s:GRAY
-exe 'hi CursorLineNr   ctermbg='.s:UI_BG.'      ctermfg='.s:BRIGHT_RED
-exe 'hi LineNr         ctermbg='.s:UI_BG.'      ctermfg='.s:UI_FG
+exe 'hi CursorLineNr   ctermbg='.s:BLACK.'      ctermfg='.s:BRIGHT_RED
+exe 'hi LineNr         ctermbg='.s:BLACK.'      ctermfg='.s:UI_FG
 exe 'hi ModeMsg        ctermbg='.s:BLACK.'      ctermfg='.s:GRAY
 exe 'hi Search         ctermbg='.s:PURPLE.'     ctermfg='.s:WHITE
 exe 'hi Signcolumn     ctermbg='.s:BLACK.'      ctermfg='.s:UI_FG
