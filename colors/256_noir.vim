@@ -13,9 +13,9 @@ if !has('gui_running') && &t_Co != 256
 endif
 
 let s:WHITE      = '255'
-let s:GRAY       = '249'
-let s:MID_GRAY   = '242'
-let s:DARK_GRAY  = '233'
+let s:GRAY       = '250'
+let s:MID_GRAY   = '245'
+let s:DARK_GRAY  = '234'
 let s:BLACK      = '16'
 let s:BRIGHT_RED = '196'
 let s:DARK_RED   = '88'
