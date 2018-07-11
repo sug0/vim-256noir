@@ -30,42 +30,42 @@ let s:UI_BG      = s:DARK_GRAY
 exe 'hi Normal ctermbg='.s:BLACK.' ctermfg='.s:GRAY
 set background=dark
 
-exe 'hi Boolean        ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
-exe 'hi Character      ctermbg='.s:BLACK.'      ctermfg='.s:BRIGHT_RED
-exe 'hi Constant       ctermbg='.s:BLACK.'      ctermfg='.s:WHITE.'    cterm=bold'
-exe 'hi Debug          ctermbg='.s:BLACK.'      ctermfg='.s:GRAY
-exe 'hi Define         ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
-exe 'hi Delimiter      ctermbg='.s:BLACK.'      ctermfg='.s:GRAY
+exe 'hi Boolean        ctermbg=NONE             ctermfg='.s:WHITE
+exe 'hi Character      ctermbg=NONE             ctermfg='.s:BRIGHT_RED
+exe 'hi Constant       ctermbg=NONE             ctermfg='.s:WHITE.'    cterm=bold'
+exe 'hi Debug          ctermbg=NONE             ctermfg='.s:GRAY
+exe 'hi Define         ctermbg=NONE             ctermfg='.s:WHITE
+exe 'hi Delimiter      ctermbg=NONE             ctermfg='.s:GRAY
 exe 'hi Error          ctermbg='.s:DARK_RED.'   ctermfg='.s:WHITE
-exe 'hi Exception      ctermbg='.s:BLACK.'      ctermfg='.s:GRAY
-exe 'hi Float          ctermbg='.s:BLACK.'      ctermfg='.s:BRIGHT_RED
-exe 'hi Function       ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
-exe 'hi Include        ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
-exe 'hi Label          ctermbg='.s:BLACK.'      ctermfg='.s:GRAY
-exe 'hi Macro          ctermbg='.s:BLACK.'      ctermfg='.s:GRAY
-exe 'hi Number         ctermbg='.s:BLACK.'      ctermfg='.s:BRIGHT_RED
-exe 'hi Operator       ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
-exe 'hi PreCondit      ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
-exe 'hi Repeat         ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
-exe 'hi SpecialChar    ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
-exe 'hi SpecialComment ctermbg='.s:BLACK.'      ctermfg='.s:MID_GRAY
-exe 'hi String         ctermbg='.s:BLACK.'      ctermfg='.s:MID_GRAY
-exe 'hi Structure      ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
-exe 'hi Tag            ctermbg='.s:BLACK.'      ctermfg='.s:BRIGHT_RED
-exe 'hi Todo           ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
-exe 'hi Typedef        ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
+exe 'hi Exception      ctermbg=NONE             ctermfg='.s:GRAY
+exe 'hi Float          ctermbg=NONE             ctermfg='.s:BRIGHT_RED
+exe 'hi Function       ctermbg=NONE             ctermfg='.s:WHITE
+exe 'hi Include        ctermbg=NONE             ctermfg='.s:WHITE
+exe 'hi Label          ctermbg=NONE             ctermfg='.s:GRAY
+exe 'hi Macro          ctermbg=NONE             ctermfg='.s:GRAY
+exe 'hi Number         ctermbg=NONE             ctermfg='.s:BRIGHT_RED
+exe 'hi Operator       ctermbg=NONE             ctermfg='.s:WHITE
+exe 'hi PreCondit      ctermbg=NONE             ctermfg='.s:WHITE
+exe 'hi Repeat         ctermbg=NONE             ctermfg='.s:WHITE
+exe 'hi SpecialChar    ctermbg=NONE             ctermfg='.s:WHITE
+exe 'hi SpecialComment ctermbg=NONE             ctermfg='.s:MID_GRAY
+exe 'hi String         ctermbg=NONE             ctermfg='.s:MID_GRAY
+exe 'hi Structure      ctermbg=NONE             ctermfg='.s:WHITE
+exe 'hi Tag            ctermbg=NONE             ctermfg='.s:BRIGHT_RED
+exe 'hi Todo           ctermbg=NONE             ctermfg='.s:WHITE
+exe 'hi Typedef        ctermbg=NONE             ctermfg='.s:WHITE
 
-exe 'hi Comment        ctermbg='.s:BLACK.'      ctermfg='.s:MID_GRAY
-exe 'hi Conditional    ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
-exe 'hi Directory      ctermbg='.s:BLACK.'      ctermfg='.s:WHITE.'    cterm=bold'
-exe 'hi Identifier     ctermbg='.s:BLACK.'      ctermfg='.s:WHITE.'    cterm=bold'
-exe 'hi Keyword        ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
-exe 'hi PreProc        ctermbg='.s:BLACK.'      ctermfg='.s:WHITE.'    cterm=bold'
-exe 'hi Special        ctermbg='.s:BLACK.'      ctermfg='.s:WHITE.'    cterm=bold'
-exe 'hi SpecialKey     ctermbg='.s:BLACK.'      ctermfg='.s:WHITE.'    cterm=bold'
-exe 'hi Statement      ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
-exe 'hi StorageClass   ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
-exe 'hi Type           ctermbg='.s:BLACK.'      ctermfg='.s:WHITE
+exe 'hi Comment        ctermbg=NONE             ctermfg='.s:MID_GRAY
+exe 'hi Conditional    ctermbg=NONE             ctermfg='.s:WHITE
+exe 'hi Directory      ctermbg=NONE             ctermfg='.s:WHITE.'    cterm=bold'
+exe 'hi Identifier     ctermbg=NONE             ctermfg='.s:WHITE.'    cterm=bold'
+exe 'hi Keyword        ctermbg=NONE             ctermfg='.s:WHITE
+exe 'hi PreProc        ctermbg=NONE             ctermfg='.s:WHITE.'    cterm=bold'
+exe 'hi Special        ctermbg=NONE             ctermfg='.s:WHITE.'    cterm=bold'
+exe 'hi SpecialKey     ctermbg=NONE             ctermfg='.s:WHITE.'    cterm=bold'
+exe 'hi Statement      ctermbg=NONE             ctermfg='.s:WHITE
+exe 'hi StorageClass   ctermbg=NONE             ctermfg='.s:WHITE
+exe 'hi Type           ctermbg=NONE             ctermfg='.s:WHITE
 hi! link Title Directory
 hi! link MoreMsg Comment
 hi! link Question Comment
@@ -74,8 +74,8 @@ hi! link Question Comment
 exe 'hi Cursor         ctermbg='.s:WHITE.'      ctermfg='.s:BLACK
 exe 'hi ErrorMsg       ctermbg=124              ctermfg='.s:WHITE
 exe 'hi FoldColumn     ctermbg='.s:BLACK.'      ctermfg='.s:GRAY
-exe 'hi Folded         ctermbg='.s:BLACK.'      ctermfg='.s:BRIGHT_RED
-exe 'hi IncSearch      ctermbg='.s:BLACK.'      ctermfg='.s:GRAY
+exe 'hi Folded         ctermbg=NONE             ctermfg='.s:BRIGHT_RED
+exe 'hi IncSearch      ctermbg=NONE             ctermfg='.s:GRAY
 exe 'hi CursorLineNr   ctermbg='.s:BLACK.'      ctermfg='.s:BRIGHT_RED
 exe 'hi LineNr         ctermbg='.s:BLACK.'      ctermfg='.s:UI_FG
 exe 'hi ModeMsg        ctermbg='.s:BLACK.'      ctermfg='.s:GRAY
@@ -107,7 +107,7 @@ if has("spell")
   exe 'hi SpellBad       ctermbg=NONE             ctermfg='.s:DARK_RED.' cterm=underline'
   exe 'hi SpellCap       ctermbg=NONE             ctermfg=NONE           cterm=underline'
   exe 'hi SpellLocal     ctermbg=NONE             ctermfg=NONE           cterm=underline'
-  exe 'hi SpellRare      ctermbg='.s:BLACK.'      ctermfg=124            cterm=underline'
+  exe 'hi SpellRare      ctermbg=NONE             ctermfg=124            cterm=underline'
 endif
 
 " diff
@@ -115,8 +115,8 @@ exe 'hi SignifySignAdd    ctermbg='.s:UI_BG.'   ctermfg='.s:ADD
 exe 'hi SignifySignDelete ctermbg='.s:UI_BG.'   ctermfg='.s:DEL
 exe 'hi SignifySignChange ctermbg='.s:UI_BG.'   ctermfg='.s:CHANGE
 
-exe 'hi DiffAdd           ctermbg='.s:BLACK.'   ctermfg='.s:ADD
-exe 'hi DiffChange        ctermbg='.s:BLACK.'   ctermfg='.s:CHANGE
+exe 'hi DiffAdd           ctermbg=NONE          ctermfg='.s:ADD
+exe 'hi DiffChange        ctermbg=NONE          ctermfg='.s:CHANGE
 exe 'hi DiffDelete        ctermbg='.s:ADD.'     ctermfg='.s:BLACK
 exe 'hi DiffText          ctermbg='.s:CHANGE.'  ctermfg='.s:BLACK
 
