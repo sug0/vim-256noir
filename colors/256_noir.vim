@@ -117,7 +117,7 @@ exe 'hi SignifySignChange ctermbg='.s:UI_BG.'   ctermfg='.s:CHANGE
 
 exe 'hi DiffAdd           ctermbg=NONE          ctermfg='.s:ADD
 exe 'hi DiffChange        ctermbg=NONE          ctermfg='.s:CHANGE
-exe 'hi DiffDelete        ctermbg='.s:ADD.'     ctermfg='.s:BLACK
+exe 'hi DiffDelete        ctermbg=NONE          ctermfg='.s:DEL
 exe 'hi DiffText          ctermbg='.s:CHANGE.'  ctermfg='.s:BLACK
 
 hi! link diffCommon   Statement
