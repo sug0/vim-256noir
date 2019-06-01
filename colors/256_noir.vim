@@ -12,113 +12,121 @@ if !has('gui_running') && &t_Co != 256
   finish
 endif
 
-let s:WHITE      = '255'
-let s:GRAY       = '250'
-let s:MID_GRAY   = '245'
-let s:DARK_GRAY  = '234'
-let s:BLACK      = '16'
-let s:BRIGHT_RED = '196'
-let s:DARK_RED   = '88'
-let s:PURPLE     = '98'
-let s:ADD        = '120'
-let s:DEL        = '167'
+function! s:Hi(group, bg, fg, attr)
+  exec printf('hi %s guifg=%s guibg=%s gui=%s ctermfg=%s ctermbg=%s cterm=%s',
+        \ a:group, a:fg[1], a:bg[1], a:attr, a:fg[0], a:bg[0], a:attr)
+endfunction
+
+" https://jonasjacek.github.io/colors/
+
+let s:NONE       = [ 'NONE', 'NONE'    ]
+let s:WHITE      = [ 255,    '#eeeeee' ]
+let s:GRAY       = [ 250,    '#bcbcbc' ]
+let s:MID_GRAY   = [ 245,    '#8a8a8a' ]
+let s:DARK_GRAY  = [ 234,    '#1c1c1c' ]
+let s:BLACK      = [ 16,     '#000000' ]
+let s:BRIGHT_RED = [ 196,    '#ff0000' ]
+let s:MID_RED    = [ 124,    '#af0000' ]
+let s:DARK_RED   = [ 88,     '#870000' ]
+let s:PURPLE     = [ 98,     '#875fd7' ]
+let s:ADD        = [ 120,    '#87ff87' ]
+let s:DEL        = [ 167,    '#d75f5f' ]
 let s:CHANGE     = s:PURPLE
 let s:UI_FG      = s:MID_GRAY
 let s:UI_BG      = s:DARK_GRAY
 
 " https://groups.google.com/forum/#!msg/vim_dev/QUzGeJsx-Cs/nEfVWxhlUq4J
-exe 'hi Normal ctermbg='.s:BLACK.' ctermfg='.s:GRAY
+
+call s:Hi('Normal', s:BLACK, s:GRAY, 'NONE')
 set background=dark
 
-exe 'hi Boolean        ctermbg=NONE             ctermfg='.s:WHITE
-exe 'hi Character      ctermbg=NONE             ctermfg='.s:BRIGHT_RED
-exe 'hi Constant       ctermbg=NONE             ctermfg='.s:WHITE.'    cterm=bold'
-exe 'hi Debug          ctermbg=NONE             ctermfg='.s:GRAY
-exe 'hi Define         ctermbg=NONE             ctermfg='.s:WHITE
-exe 'hi Delimiter      ctermbg=NONE             ctermfg='.s:GRAY
-exe 'hi Error          ctermbg='.s:DARK_RED.'   ctermfg='.s:WHITE
-exe 'hi Exception      ctermbg=NONE             ctermfg='.s:GRAY
-exe 'hi Float          ctermbg=NONE             ctermfg='.s:BRIGHT_RED
-exe 'hi Function       ctermbg=NONE             ctermfg='.s:WHITE
-exe 'hi Include        ctermbg=NONE             ctermfg='.s:WHITE
-exe 'hi Label          ctermbg=NONE             ctermfg='.s:GRAY
-exe 'hi Macro          ctermbg=NONE             ctermfg='.s:GRAY
-exe 'hi Number         ctermbg=NONE             ctermfg='.s:BRIGHT_RED
-exe 'hi Operator       ctermbg=NONE             ctermfg='.s:WHITE
-exe 'hi PreCondit      ctermbg=NONE             ctermfg='.s:WHITE
-exe 'hi Repeat         ctermbg=NONE             ctermfg='.s:WHITE
-exe 'hi SpecialChar    ctermbg=NONE             ctermfg='.s:WHITE
-exe 'hi SpecialComment ctermbg=NONE             ctermfg='.s:MID_GRAY
-exe 'hi String         ctermbg=NONE             ctermfg='.s:MID_GRAY
-exe 'hi Structure      ctermbg=NONE             ctermfg='.s:WHITE
-exe 'hi Tag            ctermbg=NONE             ctermfg='.s:BRIGHT_RED
-exe 'hi Todo           ctermbg=NONE             ctermfg='.s:WHITE
-exe 'hi Typedef        ctermbg=NONE             ctermfg='.s:WHITE
+call s:Hi('Boolean',        s:NONE,     s:WHITE,      'NONE')
+call s:Hi('Character',      s:NONE,     s:BRIGHT_RED, 'NONE')
+call s:Hi('Constant',       s:NONE,     s:WHITE,      'bold')
+call s:Hi('Debug',          s:NONE,     s:GRAY,       'NONE')
+call s:Hi('Define',         s:NONE,     s:WHITE,      'NONE')
+call s:Hi('Delimiter',      s:NONE,     s:GRAY,       'NONE')
+call s:Hi('Error',          s:DARK_RED, s:WHITE,      'NONE')
+call s:Hi('Exception',      s:NONE,     s:GRAY,       'NONE')
+call s:Hi('Float',          s:NONE,     s:BRIGHT_RED, 'NONE')
+call s:Hi('Function',       s:NONE,     s:WHITE,      'NONE')
+call s:Hi('Include',        s:NONE,     s:WHITE,      'NONE')
+call s:Hi('Label',          s:NONE,     s:GRAY,       'NONE')
+call s:Hi('Macro',          s:NONE,     s:GRAY,       'NONE')
+call s:Hi('Number',         s:NONE,     s:BRIGHT_RED, 'NONE')
+call s:Hi('Operator',       s:NONE,     s:WHITE,      'NONE')
+call s:Hi('PreCondit',      s:NONE,     s:WHITE,      'NONE')
+call s:Hi('Repeat',         s:NONE,     s:WHITE,      'NONE')
+call s:Hi('SpecialChar',    s:NONE,     s:WHITE,      'NONE')
+call s:Hi('SpecialComment', s:NONE,     s:MID_GRAY,   'NONE')
+call s:Hi('String',         s:NONE,     s:MID_GRAY,   'NONE')
+call s:Hi('Structure',      s:NONE,     s:WHITE,      'NONE')
+call s:Hi('Tag',            s:NONE,     s:BRIGHT_RED, 'NONE')
+call s:Hi('Todo',           s:NONE,     s:WHITE,      'NONE')
+call s:Hi('Typedef',        s:NONE,     s:WHITE,      'NONE')
 
-exe 'hi Comment        ctermbg=NONE             ctermfg='.s:MID_GRAY
-exe 'hi Conditional    ctermbg=NONE             ctermfg='.s:WHITE
-exe 'hi Directory      ctermbg=NONE             ctermfg='.s:WHITE.'    cterm=bold'
-exe 'hi Identifier     ctermbg=NONE             ctermfg='.s:WHITE.'    cterm=bold'
-exe 'hi Keyword        ctermbg=NONE             ctermfg='.s:WHITE
-exe 'hi PreProc        ctermbg=NONE             ctermfg='.s:WHITE.'    cterm=bold'
-exe 'hi Special        ctermbg=NONE             ctermfg='.s:WHITE.'    cterm=bold'
-exe 'hi SpecialKey     ctermbg=NONE             ctermfg='.s:WHITE.'    cterm=bold'
-exe 'hi Statement      ctermbg=NONE             ctermfg='.s:WHITE
-exe 'hi StorageClass   ctermbg=NONE             ctermfg='.s:WHITE
-exe 'hi Type           ctermbg=NONE             ctermfg='.s:WHITE
+call s:Hi('Comment',        s:NONE,     s:MID_GRAY,   'NONE')
+call s:Hi('Conditional',    s:NONE,     s:WHITE,      'NONE')
+call s:Hi('Directory',      s:NONE,     s:WHITE,      'bold')
+call s:Hi('Identifier',     s:NONE,     s:WHITE,      'bold')
+call s:Hi('Keyword',        s:NONE,     s:WHITE,      'NONE')
+call s:Hi('PreProc',        s:NONE,     s:WHITE,      'bold')
+call s:Hi('Special',        s:NONE,     s:WHITE,      'bold')
+call s:Hi('SpecialKey',     s:NONE,     s:WHITE,      'bold')
+call s:Hi('Statement',      s:NONE,     s:WHITE,      'NONE')
+call s:Hi('StorageClass',   s:NONE,     s:WHITE,      'NONE')
+call s:Hi('Type',           s:NONE,     s:WHITE,      'NONE')
 hi! link Title Directory
 hi! link MoreMsg Comment
 hi! link Question Comment
 
 " interface
-exe 'hi Cursor         ctermbg='.s:WHITE.'      ctermfg='.s:BLACK
-exe 'hi ErrorMsg       ctermbg=124              ctermfg='.s:WHITE
-exe 'hi FoldColumn     ctermbg='.s:BLACK.'      ctermfg='.s:GRAY
-exe 'hi Folded         ctermbg=NONE             ctermfg='.s:BRIGHT_RED
-exe 'hi IncSearch      ctermbg=NONE             ctermfg='.s:GRAY
-exe 'hi CursorLineNr   ctermbg='.s:BLACK.'      ctermfg='.s:BRIGHT_RED
-exe 'hi LineNr         ctermbg='.s:BLACK.'      ctermfg='.s:UI_FG
-exe 'hi ModeMsg        ctermbg='.s:BLACK.'      ctermfg='.s:GRAY
-exe 'hi Search         ctermbg='.s:PURPLE.'     ctermfg='.s:WHITE
-exe 'hi Signcolumn     ctermbg='.s:BLACK.'      ctermfg='.s:UI_FG
-exe 'hi StatusLine     ctermbg='.s:WHITE.'      ctermfg='.s:DARK_RED
-exe 'hi StatusLineNC   ctermbg='.s:UI_FG.'      ctermfg='.s:UI_BG
-exe 'hi VertSplit      ctermbg='.s:UI_FG.'      ctermfg='.s:UI_BG
-exe 'hi Visual         ctermbg='.s:GRAY.'       ctermfg='.s:BLACK
-exe 'hi VisualNOS      ctermbg='.s:GRAY.'       ctermfg='.s:BLACK
-exe 'hi WarningMsg     ctermbg='.s:BLACK.'      ctermfg='.s:BRIGHT_RED
-exe 'hi WildMenu       ctermbg='.s:WHITE.'      ctermfg='.s:MID_GRAY
+
+call s:Hi('Cursor',       s:WHITE,   s:BLACK,      'NONE')
+call s:Hi('ErrorMsg',     s:MID_RED, s:WHITE,      'NONE')
+call s:Hi('FoldColumn',   s:BLACK,   s:GRAY,       'NONE')
+call s:Hi('Folded',       s:NONE,    s:BRIGHT_RED, 'NONE')
+call s:Hi('IncSearch',    s:NONE,    s:GRAY,       'reverse')
+call s:Hi('CursorLineNr', s:BLACK,   s:BRIGHT_RED, 'NONE')
+call s:Hi('LineNr',       s:BLACK,   s:UI_FG,      'NONE')
+call s:Hi('ModeMsg',      s:BLACK,   s:GRAY,       'NONE')
+call s:Hi('Search',       s:PURPLE,  s:WHITE,      'NONE')
+call s:Hi('Signcolumn',   s:BLACK,   s:UI_FG,      'NONE')
+call s:Hi('StatusLine',   s:WHITE,   s:DARK_RED,   'bold,reverse')
+call s:Hi('StatusLineNC', s:UI_FG,   s:UI_BG,      'reverse')
+call s:Hi('VertSplit',    s:UI_FG,   s:UI_BG,      'reverse')
+call s:Hi('Visual',       s:GRAY,    s:BLACK,      'NONE')
+call s:Hi('VisualNOS',    s:GRAY,    s:BLACK,      'NONE')
+call s:Hi('WarningMsg',   s:BLACK,   s:BRIGHT_RED, 'NONE')
+call s:Hi('WildMenu',     s:WHITE,   s:MID_GRAY,   'NONE')
 hi! link NonText LineNr
 
 if version >= 700
-  exe 'hi CursorColumn   ctermbg='.s:BLACK.'      ctermfg=NONE           cterm=NONE'
-  exe 'hi CursorLine     ctermbg='.s:DARK_GRAY.'  ctermfg=NONE           cterm=NONE'
-  exe 'hi MatchParen     ctermbg='.s:PURPLE.'     ctermfg='.s:WHITE
-  exe 'hi Pmenu          ctermbg='.s:MID_GRAY.'   ctermfg='.s:WHITE
-  exe 'hi PmenuSbar      ctermbg='.s:GRAY.'       ctermfg='.s:BLACK
-  exe 'hi PmenuSel       ctermbg='.s:GRAY.'       ctermfg='.s:BLACK
-  exe 'hi PmenuThumb     ctermbg='.s:MID_GRAY.'   ctermfg='.s:DARK_GRAY
-  exe 'hi TabLine        ctermbg='.s:DARK_GRAY.'  ctermfg='.s:UI_FG.'    cterm=NONE'
-  exe 'hi TabLineFill    ctermbg='.s:DARK_GRAY.'  ctermfg='.s:DARK_GRAY
-  exe 'hi TabLineSel     ctermbg='.s:DARK_GRAY.'  ctermfg='.s:GRAY
+  call s:Hi('CursorColumn', s:BLACK,     s:NONE,      'NONE')
+  call s:Hi('CursorLine',   s:DARK_GRAY, s:NONE,      'NONE')
+  call s:Hi('MatchParen',   s:PURPLE,    s:WHITE,     'NONE')
+  call s:Hi('Pmenu',        s:MID_GRAY,  s:WHITE,     'NONE')
+  call s:Hi('PmenuSbar',    s:GRAY,      s:BLACK,     'NONE')
+  call s:Hi('PmenuSel',     s:GRAY,      s:BLACK,     'NONE')
+  call s:Hi('PmenuThumb',   s:MID_GRAY,  s:DARK_GRAY, 'NONE')
+  call s:Hi('TabLine',      s:DARK_GRAY, s:UI_FG,     'NONE')
+  call s:Hi('TabLineFill',  s:DARK_GRAY, s:DARK_GRAY, 'reverse')
+  call s:Hi('TabLineSel',   s:DARK_GRAY, s:GRAY,      'bold')
 endif
 
 if has("spell")
-  exe 'hi SpellBad       ctermbg=NONE             ctermfg='.s:DARK_RED.' cterm=underline'
-  exe 'hi SpellCap       ctermbg=NONE             ctermfg=NONE           cterm=underline'
-  exe 'hi SpellLocal     ctermbg=NONE             ctermfg=NONE           cterm=underline'
-  exe 'hi SpellRare      ctermbg=NONE             ctermfg=124            cterm=underline'
+  call s:Hi('SpellBad',   s:NONE, s:DARK_RED, 'underline')
+  call s:Hi('SpellCap',   s:NONE, s:NONE,     'underline')
+  call s:Hi('SpellLocal', s:NONE, s:NONE,     'underline')
+  call s:Hi('SpellRare',  s:NONE, s:MID_RED,  'underline')
 endif
 
 " diff
-exe 'hi SignifySignAdd    ctermbg='.s:UI_BG.'   ctermfg='.s:ADD
-exe 'hi SignifySignDelete ctermbg='.s:UI_BG.'   ctermfg='.s:DEL
-exe 'hi SignifySignChange ctermbg='.s:UI_BG.'   ctermfg='.s:CHANGE
 
-exe 'hi DiffAdd           ctermbg=NONE          ctermfg='.s:ADD
-exe 'hi DiffChange        ctermbg=NONE          ctermfg='.s:CHANGE
-exe 'hi DiffDelete        ctermbg=NONE          ctermfg='.s:DEL
-exe 'hi DiffText          ctermbg='.s:CHANGE.'  ctermfg='.s:BLACK
+call s:Hi('DiffAdd',    s:NONE,   s:ADD,    'NONE')
+call s:Hi('DiffChange', s:NONE,   s:CHANGE, 'NONE')
+call s:Hi('DiffDelete', s:NONE,   s:DEL,    'NONE')
+call s:Hi('DiffText',   s:CHANGE, s:BLACK,  'NONE')
 
 hi! link diffCommon   Statement
 hi! link diffRemoved  DiffDelete
