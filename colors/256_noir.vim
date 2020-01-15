@@ -33,11 +33,11 @@ let s:ADD        = [ 120,    '#87ff87' ]
 let s:DEL        = [ 167,    '#d75f5f' ]
 let s:CHANGE     = s:PURPLE
 let s:UI_FG      = s:MID_GRAY
-let s:UI_BG      = s:DARK_GRAY
+let s:UI_BG      = s:BLACK
 
 " https://groups.google.com/forum/#!msg/vim_dev/QUzGeJsx-Cs/nEfVWxhlUq4J
 
-call s:Hi('Normal', s:BLACK, s:GRAY, 'NONE')
+call s:Hi('Normal', s:UI_BG, s:GRAY, 'NONE')
 set background=dark
 
 call s:Hi('Boolean',        s:NONE,     s:WHITE,      'NONE')
@@ -82,36 +82,36 @@ hi! link Question Comment
 
 " interface
 
-call s:Hi('Cursor',       s:WHITE,   s:BLACK,      'NONE')
-call s:Hi('ErrorMsg',     s:MID_RED, s:WHITE,      'NONE')
-call s:Hi('FoldColumn',   s:BLACK,   s:GRAY,       'NONE')
-call s:Hi('Folded',       s:NONE,    s:BRIGHT_RED, 'NONE')
-call s:Hi('IncSearch',    s:NONE,    s:GRAY,       'reverse')
-call s:Hi('CursorLineNr', s:BLACK,   s:BRIGHT_RED, 'NONE')
-call s:Hi('LineNr',       s:BLACK,   s:UI_FG,      'NONE')
-call s:Hi('ModeMsg',      s:BLACK,   s:GRAY,       'NONE')
-call s:Hi('Search',       s:PURPLE,  s:WHITE,      'NONE')
-call s:Hi('Signcolumn',   s:BLACK,   s:UI_FG,      'NONE')
-call s:Hi('StatusLine',   s:WHITE,   s:DARK_RED,   'bold,reverse')
-call s:Hi('StatusLineNC', s:UI_FG,   s:UI_BG,      'reverse')
-call s:Hi('VertSplit',    s:UI_FG,   s:UI_BG,      'reverse')
-call s:Hi('Visual',       s:GRAY,    s:BLACK,      'NONE')
-call s:Hi('VisualNOS',    s:GRAY,    s:BLACK,      'NONE')
-call s:Hi('WarningMsg',   s:BLACK,   s:BRIGHT_RED, 'NONE')
-call s:Hi('WildMenu',     s:WHITE,   s:MID_GRAY,   'NONE')
+call s:Hi('Cursor',       s:WHITE,     s:BLACK,      'NONE')
+call s:Hi('ErrorMsg',     s:MID_RED,   s:WHITE,      'NONE')
+call s:Hi('FoldColumn',   s:UI_BG,     s:GRAY,       'NONE')
+call s:Hi('Folded',       s:NONE,      s:BRIGHT_RED, 'NONE')
+call s:Hi('IncSearch',    s:GRAY,      s:BLACK,      'NONE')
+call s:Hi('CursorLineNr', s:UI_BG,     s:BRIGHT_RED, 'NONE')
+call s:Hi('LineNr',       s:UI_BG,     s:UI_FG,      'NONE')
+call s:Hi('ModeMsg',      s:UI_BG,     s:GRAY,       'NONE')
+call s:Hi('Search',       s:PURPLE,    s:WHITE,      'NONE')
+call s:Hi('Signcolumn',   s:UI_BG,     s:UI_FG,      'NONE')
+call s:Hi('StatusLine',   s:UI_BG,     s:MID_RED,    'bold')
+call s:Hi('StatusLineNC', s:UI_BG,     s:MID_GRAY,   'NONE')
+call s:Hi('VertSplit',    s:UI_BG,     s:UI_FG,      'NONE')
+call s:Hi('Visual',       s:GRAY,      s:BLACK,      'NONE')
+call s:Hi('VisualNOS',    s:GRAY,      s:BLACK,      'NONE')
+call s:Hi('WarningMsg',   s:UI_BG,     s:BRIGHT_RED, 'NONE')
+call s:Hi('WildMenu',     s:WHITE,     s:MID_GRAY,   'NONE')
 hi! link NonText LineNr
 
 if version >= 700
-  call s:Hi('CursorColumn', s:BLACK,     s:NONE,      'NONE')
+  call s:Hi('CursorColumn', s:UI_BG,     s:NONE,      'NONE')
   call s:Hi('CursorLine',   s:DARK_GRAY, s:NONE,      'NONE')
   call s:Hi('MatchParen',   s:PURPLE,    s:WHITE,     'NONE')
   call s:Hi('Pmenu',        s:MID_GRAY,  s:WHITE,     'NONE')
-  call s:Hi('PmenuSbar',    s:GRAY,      s:BLACK,     'NONE')
-  call s:Hi('PmenuSel',     s:GRAY,      s:BLACK,     'NONE')
+  call s:Hi('PmenuSbar',    s:GRAY,      s:UI_BG,     'NONE')
+  call s:Hi('PmenuSel',     s:GRAY,      s:UI_BG,     'NONE')
   call s:Hi('PmenuThumb',   s:MID_GRAY,  s:DARK_GRAY, 'NONE')
-  call s:Hi('TabLine',      s:DARK_GRAY, s:UI_FG,     'NONE')
-  call s:Hi('TabLineFill',  s:DARK_GRAY, s:DARK_GRAY, 'reverse')
-  call s:Hi('TabLineSel',   s:DARK_GRAY, s:GRAY,      'bold')
+  call s:Hi('TabLine',      s:UI_BG,     s:UI_FG,     'NONE')
+  call s:Hi('TabLineFill',  s:UI_BG,     s:DARK_GRAY, 'NONE')
+  call s:Hi('TabLineSel',   s:UI_BG,     s:GRAY,      'bold')
 endif
 
 if has("spell")
@@ -126,7 +126,7 @@ endif
 call s:Hi('DiffAdd',    s:NONE,   s:ADD,    'NONE')
 call s:Hi('DiffChange', s:NONE,   s:CHANGE, 'NONE')
 call s:Hi('DiffDelete', s:NONE,   s:DEL,    'NONE')
-call s:Hi('DiffText',   s:CHANGE, s:BLACK,  'NONE')
+call s:Hi('DiffText',   s:CHANGE, s:UI_BG,  'NONE')
 
 hi! link diffCommon   Statement
 hi! link diffRemoved  DiffDelete
