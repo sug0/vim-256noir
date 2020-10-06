@@ -66,7 +66,7 @@ call s:Hi('Tag',            s:NONE,     s:BRIGHT_RED, 'NONE')
 call s:Hi('Todo',           s:NONE,     s:WHITE,      'NONE')
 call s:Hi('Typedef',        s:NONE,     s:WHITE,      'NONE')
 
-call s:Hi('Comment',        s:NONE,     s:MID_GRAY,   'NONE')
+call s:Hi('Comment',        s:NONE,     s:LINENR,     'NONE')
 call s:Hi('Conditional',    s:NONE,     s:WHITE,      'NONE')
 call s:Hi('Directory',      s:NONE,     s:WHITE,      'bold')
 call s:Hi('Identifier',     s:NONE,     s:WHITE,      'bold')
