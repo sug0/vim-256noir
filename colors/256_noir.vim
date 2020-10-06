@@ -24,14 +24,15 @@ let s:WHITE      = [ 255,    '#eeeeee' ]
 let s:GRAY       = [ 250,    '#bcbcbc' ]
 let s:MID_GRAY   = [ 245,    '#8a8a8a' ]
 let s:DARK_GRAY  = [ 234,    '#1c1c1c' ]
+let s:LINENR     = [ 239,    '#4e4e4e' ]
 let s:BLACK      = [ 16,     '#000000' ]
 let s:BRIGHT_RED = [ 196,    '#ff0000' ]
 let s:MID_RED    = [ 124,    '#af0000' ]
 let s:DARK_RED   = [ 88,     '#870000' ]
-let s:PURPLE     = [ 240,    '#585858' ]
+let s:HIGHLT     = [ 240,    '#585858' ]
 let s:ADD        = [ 120,    '#87ff87' ]
 let s:DEL        = [ 167,    '#d75f5f' ]
-let s:CHANGE     = s:PURPLE
+let s:CHANGE     = s:HIGHLT
 let s:UI_FG      = s:MID_GRAY
 let s:UI_BG      = s:BLACK
 
@@ -88,9 +89,9 @@ call s:Hi('FoldColumn',   s:UI_BG,     s:GRAY,       'NONE')
 call s:Hi('Folded',       s:NONE,      s:BRIGHT_RED, 'NONE')
 call s:Hi('IncSearch',    s:GRAY,      s:BLACK,      'NONE')
 call s:Hi('CursorLineNr', s:UI_BG,     s:BRIGHT_RED, 'NONE')
-call s:Hi('LineNr',       s:UI_BG,     s:UI_FG,      'NONE')
+call s:Hi('LineNr',       s:NONE,      s:LINENR,     'NONE')
 call s:Hi('ModeMsg',      s:UI_BG,     s:GRAY,       'NONE')
-call s:Hi('Search',       s:PURPLE,    s:WHITE,      'bold')
+call s:Hi('Search',       s:HIGHLT,    s:WHITE,      'bold')
 call s:Hi('Signcolumn',   s:UI_BG,     s:UI_FG,      'NONE')
 call s:Hi('StatusLine',   s:MID_RED,   s:WHITE,      'bold')
 call s:Hi('StatusLineNC', s:MID_GRAY,  s:UI_BG,      'NONE')
@@ -104,7 +105,7 @@ hi! link NonText LineNr
 if version >= 700
   call s:Hi('CursorColumn', s:UI_BG,     s:NONE,      'NONE')
   call s:Hi('CursorLine',   s:DARK_GRAY, s:NONE,      'NONE')
-  call s:Hi('MatchParen',   s:PURPLE,    s:WHITE,     'bold')
+  call s:Hi('MatchParen',   s:HIGHLT,    s:WHITE,     'bold')
   call s:Hi('Pmenu',        s:MID_GRAY,  s:WHITE,     'NONE')
   call s:Hi('PmenuSbar',    s:GRAY,      s:UI_BG,     'NONE')
   call s:Hi('PmenuSel',     s:GRAY,      s:UI_BG,     'NONE')
